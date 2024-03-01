@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+      
+</head>
+<body>
+    <div id="d1"></div>
+   <script>
+    // hii
+     var students=["ram","sri","roshi","geyash","tanu"]
+     for(var i=0;i<=students.length-1;i++ ){
+        var nbtn=document.createElement("button")
+         nbtn.onclick=function(){alert("hi")}
+        nbtn.innerHTML=students[i]
+        var x=document.getElementById("d1")
+        x.appendChild(nbtn)
+     }
+      
+     undefined
+     for(var i=0;i<=students.length-1;i++ ){
+        var nbtn=document.createElement("button")
+         nbtn.onclick=function(){alert(students[i])}
+        nbtn.innerHTML=students[i]
+        var x=document.getElementById("d1")
+        x.appendChild(nbtn)
+     }
+   //  It gives index values"5" 
+     for(var i=0;i<=students.length-1;i++ ){
+        var nbtn=document.createElement("button")
+         nbtn.onclick=function(){alert([i])}
+        nbtn.innerHTML=students[i]
+        var x=document.getElementById("d1")
+        x.appendChild(nbtn)
+     }
+
+    //  to click the button it gives the arrays
+    //    let is the block scope
+
+     for(let i=0;i<=students.length-1;i++ ){
+        var nbtn=document.createElement("button")
+         nbtn.onclick=function(){alert(students[i])}
+        nbtn.innerHTML=students[i]
+        var x=document.getElementById("d1")
+        x.appendChild(nbtn)
+     }
+     
+    //  # FOREACH #
+         students. forEach(function(s){
+            var nbtn=document.createElement("button")
+            nbtn.onclick=function(){alert[i]}
+            nbtn.innerHTML=s;
+            var x=document.getElementById("d1")
+            x.appendChild(nbtn)
+         })
+
+         
+
+       
+
+   </script>
+</body>
+</html>

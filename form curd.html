@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+</head>
+<body>
+    <label>firstname:</label>
+    <input type="text" id="fn">
+  <br><br>
+    <lable>lastname</lable>
+    <input type="text" id="ln"
+    <br><br>
+    <br>
+    <label>city</label>
+    <input type="text" id="city"
+    <br><br>
+    <br>
+    <label>age</label>
+    <input type="text" id="age"
+    <br><br>
+    <br>
+    <button id="adbt" onclick="add()">Add Person</button>
+    <button id="updt" onclick="upp()">Update</button>
+  
+    <table border="2">
+        <thead>
+            <tr>
+                <th>firstname</th>
+                <th>lastname</th>
+                <th>age</th>
+                <th>city</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbd"></tbody>
+    </table>
+   <script>
+    var addbtn=document.getElementById("adbt")
+    var updtn=document.getElementById("updt")
+    var tablebody=document.getElementById("tbd")
+    var fname=document.getElementById("fn")
+    var lname=document.getElementById("ln")
+    var age=document.getElementById("age")
+    var city=document.getElementById("city")
+     
+    var ar=[];
+    var currentIndex;
+
+
+    function add(){
+        var obj={
+            firstname:fname.value,
+            lastnmae:lname.value,
+                 age:age.value,
+                 city:city.value     
+        }
+          ar. push(obj)
+          createTable(ar)
+    }
+    function update(){
+        var updatedperson={
+            firstname:firstname.value,
+            lastname:lastname.value,
+                 age:age.value,
+                 city:city.value    
+        }
+        people[currentIndex]=updatedperson
+        createTable(people)
+    }
+
+    function createTable(arr){
+        tablebody.innerHTML=""
+        arr.forEach(function(a,ind){
+
+        var newtr=document.createElement("tr")
+
+        td1=document.createElement("td")
+        td1.innerHTML=a.firstname
+        newtr.appendChild(td1)
+         
+        td2=document.createElement("td")
+        td2.innerHTML=a.lastname
+        newtr.appendChild(td2)
+         
+        td3=document.createElement("td")
+        td3.innerHTML=a.age
+        newtr.appendChild(td3)
+       
+        td4=document.createElement("td")
+        td4.innerHTML=a.firstname
+        newtr.appendChild(td4)
+
+        td5=document.createElement("td")
+        var delbtn=document.createElement("button")
+         delbtn.innerHTML="delete"
+         delbtn.onclick=function(){
+            arr.splice(ind,1)
+            createTable(arr)
+         }
+          var editbtn=document.createElement("button")
+           editbtn.innerHTML="edit"
+           editbtn.onclick=function(){
+            currentIndex=ind
+
+
+            fname.value=a.firstname
+            lname.value=a.lastname
+            age.value=a.age
+            city.value=a.city
+            addbtn.style.display="none"
+            updatebtn.style.display="inline-block"
+    
+           }
+
+            td5.appendChild(delbtn)
+            td5.appendChild(editbtn)
+            newtr.appendChild(td5)
+
+
+            tablebody.appendChild(newtr)
+
+
+        })
+            
+        
+    }
+   function upp(){
+
+   }
+
+   </script>
+</body>
+</html>

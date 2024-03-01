@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <!-- <input type="text" id ="inp1">
+    <button onclick="addtask()">Add Task</button>
+    <ul id ="tasklist">
+
+    </ul>
+        
+      <script>
+        var inp=document.getElementById("inp1")
+        var a=document.getElementById("tasklist")
+
+        var tasks=[];
+        
+      function addtask(){
+        a.innerHTML=""
+        tasks.push(inp.value)
+        console.log(tasks)
+        tasks.forEach(function(task){
+            var li=document.createElement("li")
+            li.innerHTML=task
+           a.appendChild(li)
+        })
+      }
+ -->
+<!-- </script>
+
+ -->
+   <label>person</label>
+   <input type="text" id="a"><br><br>
+   <label>Age</label>
+   <input type= "text" id="b"><br><br>
+   <button onclick="addperson()">Add person</button>
+
+     <table border="2">
+        <thead>
+            <tr>
+                <th>person</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody id="tb">
+
+        </tbody>
+     </table>
+     <script>
+     var pname=document.getElementById("a")
+     var page=document.getElementById("b")
+     var table=document.getElementById("tb")
+
+       var people=[];
+        
+       function addperson(){
+        tb.innerHTML=""
+
+        var personobj={
+            personName:pname.Value,
+            personAge: page.value,
+            
+        }
+        people.push(personobj)
+        people.forEach(function(person){
+            var tr=document.createElement("tr")
+
+          
+            var td1=document.createElement("td")
+            td1.innerHTML=person.personname
+            tr.appendChild(td1)
+
+            var td2=document.createElement("td")
+            td2.innerHTML=person.personage
+            tr.appendChild(td2)
+           
+            tb.appendChild(tr)
+
+        })
+    
+       }
+
+
+
+     </script>
+
+
+
+
+
+
+    
+    
+</body>
+</html>

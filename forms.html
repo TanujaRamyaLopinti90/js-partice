@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+</head>
+<body>
+    <form name="studentform" onsubmit="addstudent(event)">
+    <input name="fullname" type="text" id="b1" placeholder="Enter ur name">
+    <br/>
+    <br/>
+    <input name="age" type="text" id="b2" placeholder="Enter ur age">
+    <br/><br/>
+    <input name="city" type="text" id="city" placeholder="Enter ur city">
+    <br/>
+    Gender:
+    <input type="radio" name ='gen' value="female">:female
+    <input type="radio" name ='gen' value="male">:male
+    <input type="radio" name ='gen' value="others">:others
+    <br/>
+    know techs:<br/>
+    <input type="checkbox" name="techs" value="html" >:html
+    <input type="checkbox" name="techs" value="css">:css
+    <input type="checkbox" name="techs" value="boostrap">:boostrap
+    <input type="checkbox"  name="techs" value="reactjs">:reactjs
+    <input type="checkbox"  name="techs"  value="javascript">:javascript
+    <br/>
+         
+    <button>Add students</button>
+    <!-- <button type="reset"></button> -->
+    </form>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>fullname</th>
+                <th>age</th>
+                <th>city</th>
+            </tr>
+        </thead>
+        <tbody id="d1"></tbody>
+
+    </table>
+    <script>
+        var students=[]
+        function addstudent(e){
+            e.preventDefault();
+            var obj={
+                fullname:"",
+                age:"",
+                city:"",
+                gebder:"",
+                technologies:[]
+            }
+           obj.fullname=document.studentform.fullname.value;
+           obj.age=document.studentform.age.value;
+           obj.city=document.studentform.city.value;
+           obj.gender=document.studentform.gen.value
+           document.studentform.techs.forEach(function(a,b){
+               if(a.checked===true){
+                obj.technologies.push(a.value)
+               }
+  
+           })
+           students.push(obj)
+           genUI();
+         //  document.studentform.reset()
+        }
+        function genUI(){
+            document.getElementById("d1").innerHTML="";
+            students.forEach(function(student,b) {
+                var newtr=document.createElement("tr");
+                for(var k in student){
+                    var ntd=document.createElement("td");
+                    ntd.innerHTML=student[k];
+                    newtr.appendChild(ntd)
+                }
+                document.getElementById("d1").appendChild(newtr)
+              
+
+                
+            });
+        }
+        genUI();
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

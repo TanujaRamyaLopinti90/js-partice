@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+    <!-- <table border="3">
+        <tr>
+            <th>firstname</th>
+            <th>lastnme</th>
+            <th>age</th>
+            <th>gender</th>
+            <th>city</th>
+            <th>salary</th>
+        </tr>
+        <tbody id="d1"></tbody> -->
+<table border="2">
+    <th>firstname</th>
+        <th>lastname</th>
+        <th>age</th>
+        <th>city</th>
+        <th>salary</th>
+    <tr>
+        <th>male</th>
+        <th>female</th>
+        </tr>
+        <tbody id="a1"></tbody>
+        <tbody id="a2"></tbody>
+
+ </table>
+
+    
+
+
+<script>
+     var people = [
+                        {
+                        "firstname": "praveen",
+                        "lastname": "gubbala",
+                        "age": 36,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 10000
+                        },
+                        {
+                        "firstname": "srikanth",
+                        "lastname": "gubbala",
+                        "age": 32,
+                        "gender": "male",
+                        "city": "bengaluru",
+                        "salary": 20000
+                        },
+                        {
+                        "firstname": "pradeep",
+                        "lastname": "reddy",
+                        "age": 21,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 25000
+                        },
+                        {
+                        "firstname": "mounika",
+                        "lastname": "mudiraj",
+                        "lastname": "mudiraj",
+                        "age": 20,
+                        "gender": "female",
+                        "city": "nalgonda",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "nikhil",
+                        "lastname": "m",
+                        "age": 22,
+                        "gender": "male",
+                        "city": "guntur",
+                        "salary": 2000
+                        },
+                        {
+                        "firstname": "riya",
+                        "lastname": "bhadouria",
+                        "age": 14,
+                        "gender": "female",
+                        "city": "indore",
+                        "salary": 40000
+                        }
+                        ];
+          var x = document.getElementById("d1")
+          products.forEach(function(a){
+            var tr1=document.createElement("tr")
+
+            var lastname=document.createElement("td")
+             lastname.innerHTML=a.lastname
+             tr1.appendChild(lastnametd)
+
+             var age=document.createElement("td")
+             age.innerHTML=a.age
+             tr1.appendChild(agetd)
+
+             var firstname=document.createElement("td")
+             firstname.innerHTML=a.firstname
+             tr1.appendChild(firstname)
+
+             var firstname=document.createElement("td")
+             firstname.innerHTML=a.firstname
+             tr1.appendChild(firstname)
+
+             var firstname=document.createElement("td")
+             firstname.innerHTML=a.firstname
+             tr1.appendChild(firstname)
+
+             var firstname=document.createElement("td")
+             firstname.innerHTML=a.firstname
+             tr1.appendChild(firstname)
+
+           //2. Display all male and female people in two separate tables.  
+           var m= document.getElementById("a1")
+           var f=document.getElementById("a2")
+          
+           peolp.forEach(function(person){
+            var tr=document.createElement("tr")
+
+            var td1=document.createElement("td")
+            td1.innerHTML=person.firstname
+            tr.appendChild(td1)
+
+            var td1=document.createElement("td")
+            td1.innerHTML=person.lastname
+            tr.appendChild(td1)
+
+            var td1=document.createElement("td")
+            td1.innerHTML=person.age
+            tr.appendChild(td1)
+
+            var td1=document.createElement("td")
+            td1.innerHTML=person.gender
+            tr.appendChild(td1)
+
+            var td1=document.createElement("td")
+            td1.innerHTML=person.city
+            tr.appendChild(td1)
+
+            var td1=document.createElement("td")
+            td1.innerHTML=person.salary
+            tr.appendChild(td1)
+
+            if (person.gender==="male"){
+                m.appendChild(tr)    
+            }
+            else if(person .gender==="female"){
+              f.appendChild(tr)
+            }
+
+            
+
+            })
+        })
+            
+           
+</script>
+</body>
+</html>

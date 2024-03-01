@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        
+           
+            
+            //    var person = {
+            //                     "firstName" : "Harry",
+            //                     "lastName" : "Potter",
+            //                     "age": 30,
+            //                     "gender": "male",
+            //                     "skill" : "ReactJS",                                
+            //                     "expertise": "Beginner"
+            //                 };
+            //                 console.log(person["firstName"])
+            //                 console.log(person["lastName"])
+            //                 console.log(person["firstName"]+person["lastName"])
+                         
+            //                // If the age is less than 18, then print "false". If the age is more than 18, then print "true"
+
+            //             var a=18;
+            //             if( person["age"]>a){
+            //                 console.log("True")
+            //             }
+            //              else
+            //              {
+            //                 console.log(False)
+            //              }
+                
+
+            var marks = {
+                                "maths" : 34,
+                                "english" : 56,
+                                "science": 32,
+                                "hindi" : 75,
+                                "social science": 65
+                            };
+
+                        console.log(marks["maths"]);
+                        console.log(marks["english"]);
+                        console.log(marks["science"]);
+                        console.log(marks["hindi"]);
+                        console.log(marks["social science" ])
+
+                         for(var k in marks){
+                            console.log(marks[k])
+                         }
+                        ///////////////////////////////////
+                     
+                        for(var k in marks){
+                        console.log([k])
+                        }
+                        //////////////////////////
+
+                        var count = 0
+                        for(k in marks){
+                            count++
+                        }
+                            console.log([count])
+                        
+                        /////////////////////////
+ 
+                        var sum=0;
+                        var count=0
+                         for(var k in marks){
+                            sum=sum+marks[k]
+                            count++
+                         }
+                         var actualmarks= count*100
+                         console.log(sum/actualmarks*100)
+                        ///////////////////////////////////////
+
+                        for(var k in marks){
+                            
+                       if(marks[k]>35){
+                        console.log(k)
+                       }
+                       }
+                    //////////////////////////
+
+                     for(var k in marks){
+                        if(marks[k]>35){ 
+                            console.log( "pass")
+                        }
+                    
+                        else{
+                            
+                            console.log ( ("fail"))
+                        }
+                    }
+                    
+                     
+
+
+                           
+                                                                                                       
+                     
+
+    </script>
+</body>
+</html>

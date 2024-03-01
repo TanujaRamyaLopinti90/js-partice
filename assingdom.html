@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <div id ="a"></div>
+    <div id ="ab1"></div>
+    <ol id ="ab"></ol>
+
+    <script>
+        // var flowers =["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg"
+        // ]
+        // var i=0;
+        // var x =document.createElement("img")
+        // x.src=flowers[i]
+        // x.style.width="200px"
+        // x.style.height="200px"
+        // document.getElementById("a").appendChild(x)
+
+
+       // Generate List Elements using document object for the given Array of Objects
+
+var students = [
+            {
+            name:'jaya',
+            gender:'female',
+            place:'gachibowli',
+            },
+            {
+            name:'dasu',
+            gender:'male',
+            place:'kphb'
+            },
+            {
+            name:'swati',
+            gender:'female',
+            place:'pune'
+            },
+            {
+            name:'pallavi',
+            gender:'female',
+            place:'assam'
+            },
+            {
+            name:'kiran',
+            gender:'male',
+            place:'kondapur'
+            },
+            {
+            name:'thirumala',
+            gender:'male',
+            place:'madhapur'
+            },
+            {
+            name:'priya',
+            gender:'female',
+            place:'hitech'
+            }
+        ]
+        var z=document.getElementById("ab1")
+        for(var i=0;i<=students.length-1;i++){
+            var x=document.createElement("li");
+            x.innerHTML=students[i].name   
+
+         var y = document.createElement("ul")
+         var a =document.createElement("li")
+         a.innerHTML=students[i].gender
+
+         var b = document.createElement("li")
+         b.innerHTML=students[i].place
+          y.appendChild(a)
+          y.appendChild(b)
+
+          x.appendChild(y)
+          z.appendChild(x)
+
+        if(students[i].gender==="female"){
+            x.style.backgroundColor="pink"// y.style.backgroundColor="pink"
+        
+        }
+        else{
+            x.style.backgroundColor="skyblue"
+                       (or)
+            // y.style.backgroundColor="skyblue"
+            
+        }
+    }
+
+//     var students = [		
+//   {
+//     "firstname": "praveen",
+//       "age": 36,
+//    "subjects":['angular','nodejs','reactjs','java']
+//  }, 
+// {
+//   "firstname": "srikanth",
+//        "age": 32,
+//     "subjects":['react','mongodb']
+// }, 
+//  {
+//     "firstname": "pradeep",
+//           "age": 21,
+//    "subjects":['express','mongoose','python']
+//  }
+// ]
+    
+//    var a =document.getElementById("ab");
+//    for (var i=0;i<=students.length-1;i++){
+//     var x = document.createElement("li")
+//     x.innerHTML=students[i].name
+
+//     var y = document.createElement("ol")
+//     for(var j=0;j<=students[i].subjects.length-1;j++){
+//         var b=document.createElement("li")
+//         b.innerHTML=students[i].subjects[i]
+//         y.appendChild(b)
+//     }
+//         x.appendChild(y)
+//         a.appendChild(x)
+//    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+  
+
+                
+        
+    </script>
+    
+</body>
+</html>

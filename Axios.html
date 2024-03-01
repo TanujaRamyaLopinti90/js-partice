@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <button onclick="sortAsc()">A-Z</button>
+    <button onclick="sortDsc()">z-A</button>
+    <input type="text" placeholder="search" onkeyup="search()" id="searchBox">
+    <table border="3">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>capital</th>
+                <th>region</th>
+                <th>sub region</th>
+                <th>flag</th>
+            </tr>
+        </thead>
+            <tbody id="d1">
+
+            </tbody>
+    
+    </table>
+   <script>
+    var tbd=document.getElementById("d1")
+
+    var countries=[];
+
+
+    axios.get("https://restcountries.com/v3.1/all").then(function(res){
+        //console.log(res.data
+        countries=res.data
+       // console.log(countries[0])
+      createTable(countries)
+    })
+     function sortAsc(){
+        countries.sort(function(a,b){
+            var fn1=a.name.common.toLowerCase();
+            var fn2=b.name.common.toLowerCase();
+           if(fn1>fn2){
+            return 1
+           }
+           else{
+            return -1
+           }
+
+        })
+        createTable(countries)
+
+     }
+     
+
+     function sortDsc(){
+        countries.sort(function(a,b){
+            var fn1=a.name.common.toLowerCase();
+            var fn2=b.name.common.toLowerCase();
+           if(fn1< fn2){
+            return 1
+           }
+           else{
+            return -1
+           }
+
+        })
+        createTable(countries)
+
+     }
+     function search(){
+        var filteredcountries=countries.filter(function(country){
+            return (country.name.common.toLowerCase().startsWith(searchBox.value.toLowerCase()))
+            
+        })
+        createTable(filteredcountries)
+
+
+    function createTable(arr){
+        tbd.innerHTML=""
+     countries.forEach(function(a){
+        var newtr=document.createElement("tr")
+
+        var td1=document.createElement("td")
+        td1.innerHTML=a.name.common
+        newtr.appendChild(td1)
+
+        var td2=document.createElement("td")
+        td2.innerHTML=a.capital;
+        newtr.appendChild(td2)
+
+        var td3=document.createElement("td")
+        td3.innerHTML=a.region;
+        newtr.appendChild(td3)
+
+        var td4=document.createElement("td")
+        td4.innerHTML=a.subregion;
+        newtr.appendChild(td4)
+
+        var td5=document.createElement("td")
+
+        var newimg=document.createElement("img")
+        newimg.src=a.flags.png
+        newimg.style.width="100px"
+        td5.appendChild(newimg)
+        newtr.appendChild(td5)
+
+        tbd.appendChild(newtr)
+     })
+    }
+}
+    
+   </script> 
+</body>
+</html>

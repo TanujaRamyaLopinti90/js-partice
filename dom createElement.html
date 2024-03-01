@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+   <h1 id ="x">hello world</h1>----(1)
+    <h1 class="a">hello</h1>
+    <form onsubmit="event.preventDefault()">
+        <input type="text" placeholder="Enter fullname" id="fn"><br/>
+        <input type="text" placeholder="Enter place"id="pl"><br/>
+        <input type="text" placeholder="Enter gender"id="gen"><br/>
+        <button onclick="Addemployees()">Add employees</button>
+    </form>
+    <table border="2">
+        <thead>
+            <th>fullname</th>
+            <th>place</th>
+            <th>gender</th>
+        </thead>
+        <tbody id="dm">
+            
+        </tbody>
+    </table>
+    <script>
+       // var newh2= document.createElement("h2")
+       // console.dir(newh2)//OBJECT(h2)
+       // console.log(newh2)//<h1></h2>
+       // newh2.innerHTML="hello world"//BODY(<h1></h2>)
+       // document.body.appendChild(newh2)//<h1>hello world</h2>
+
+   // ARRAY-------------------
+    //  var dosthullu = ['sravani','maha','bindu','peter','tanu']
+    //   for (var i=0;i<=dosthullu.length-1;i++){
+    //     var newli= document.createElement('li')
+    //     newli.innerHTML=dosthullu[i]
+    //     console.log(newli)
+    //     document.getElementById('d1').appendChild(newli)
+
+//       } 
+  // OBJECT---------------------
+   var employees=[
+    {
+        fullname:"roshika",
+         place  :"ap",
+         gender :"female"
+    },
+    {
+       fullname:"geyash",
+       place   :"ap",
+       gender  :"male"
+    },
+    {
+        fullname:"amma",
+        place   :"ap",
+        gender  :"female"
+    }
+]
+    for(var i=0;i<=employees.length-1;i++){
+       var newtr=document.createElement("tr")
+
+        var fullnametd=document.createElement("td") 
+        fullnametd.innerHTML=employees[i].fullname
+        newtr.appendChild(fullnametd)
+
+        var placetd=document.createElement("td") 
+        placetd.innerHTML=employees[i].place
+        newtr.appendChild(placetd)
+
+        var gendertd=document.createElement("td") 
+        gendertd.innerHTML=employees[i].gender
+        newtr.appendChild(gendertd)
+        console.log(newtr)
+
+        document.getElementById("dm").appendChild(newtr)
+        console.log(newtr)
+    }
+    function addemployees(){
+        var newemp={
+            fullname:document.getElementById("fn").value,
+            place:document.getElementById("pl").value,
+            gender:document.getElementById("gen").value
+        }
+        
+        console.log(newemp)
+
+    }
+
+
+
+    
+
+
+   
+
+   
+
+   
+
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var ar =" roshika" 
+        console.log(ar.charAt(2))
+        
+        console.log(ar.includes("a"))
+
+        console.log(ar.charCodeAt())
+        
+        console.log(ar.startsWith("r"))
+
+    console.log(ar.replace("s","t"))
+
+    
+
+//     /////////////////[INDEX]//////////////////
+
+      console.log(ar.indexOf("b"))
+     console.log(ar.lastIndexOf("a"))
+
+    /////////////////////////////
+        var a="roshi"
+        var b="geyash"
+        console.log(a.concat("", b) )
+
+//     ///////////// [NORMALIZATION]///////////
+
+    var b= "97"
+    var c= "114"
+    console.log(b.normalize("c"))
+
+//         ////////////////////////////////////
+
+        var str = "tanuja"
+        var ar2= str.split("")
+        var ar3= ar2.reverse()
+        var str4= ar3.join("")
+    
+        console.log(str4)
+
+//     /////////////[padEnd]/////////////
+    
+    console.log(ar.padEnd( ar.length+10,"*"))
+            //   (or)  //
+    console.log(ar.padEnd("10","*"))
+
+    console.log(ar.padStart(ar.length+10,"*"))
+           //   (or)     //
+    console.log(ar.padStart("10","*"))
+
+//     ////////////////[REPEAT]//////////////////
+     var ar = "be happy mowa!"
+     var ar2= ar.slice(length-5)
+     console.log(ar2)
+    console.log("be happy "+ar2.repeat(3))
+                  [or]     //
+      console.log(ar.repeat(3))
+
+//  /////////////////[REPLACE]/////////////////
+   var ar = "roshika"
+  var ar2= (ar.replace("roshika","geyash"))
+  console.log(ar2)
+
+  console.log(ar.replaceAll("k","o"))
+
+// ///////////////[slice]////////////////
+
+var str = "live happy without expectations"
+var str2 = str.slice(str.length-20)
+console.log(str2)
+       (or)    //
+      console.log(str.slice(3,14))
+      console.log(str.slice(7,-14))
+      console.log(str.slice(-16))
+      console.log(str.slice(-11,-9))
+
+// /////////////////[SPLIT]//////////////////
+var str ="hopeless"
+var str2 =str.split("")
+console.log(str2)
+
+// //////////////[SUBRINGS]//////////////
+var str="never stop dreaming"
+
+console.log(str.substring(4,12))
+console.log(str.substring(-6,-12))
+console.log(str.substring(5))
+console.log(str.substring(15,4))
+console.log(str.substring(0))
+
+// // ///////////////[TOSTRING]/////////////
+var str=new String("tanuja")
+var str2="tanuja"
+console.log(str.toString(str2))
+    //  (or)   //
+// console.log(str)
+console.log(str.toString(str))
+
+// ///////////////[VALUEOF]////////////////
+
+console.log(str.valueOf(str))
+
+// /////////[TOWELLFORMED]///////////////
+
+var s1="ab\UD83D\UDE04c"
+console.log(s1.towellFormed())
+
+// ////////////////[TRIM]///////////////
+var a="  hello world  "
+//  console.log(a)
+//       //     (or)      //
+      console.log(a.trim())
+
+      ///////////[TRIMEND]///////////
+    console.log(a.trimEnd())
+
+    console.log(a.trimstart())
+
+
+
+
+
+
+//     </script>
+    
+// </body>
+// </html>
